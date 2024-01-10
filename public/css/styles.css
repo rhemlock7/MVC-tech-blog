@@ -77,6 +77,23 @@ a {
     align-items: center;
 }
 
+#article-card {
+    border: 3px solid var(--primary);
+}
+
+#card-header {
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+#card-body {
+    padding: 25px 30px;
+}
+
 /* Login page Form Section */
 #form-section {
     display: flex;
