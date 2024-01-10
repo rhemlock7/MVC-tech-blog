@@ -8,20 +8,23 @@
 </head>
 <body>
     <header>
-        <h1>The Tech Blog</h1>
         <nav>
             <ul id="nav-list">
-                <li>Home</li>
-                <li>Dashboard</li>
-                <li>Login</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/login">Login</a></li>
             </ul>
         </nav>
+        {{!-- Need to dynamically change this to which page is being rendered --}}
+        <h1 id="page-title">Page Title</h1>
     </header>
     <main>
         <section>
-            {{body}}
+            {{{body}}}
         </section>
         <section id="button-container">
+            {{!-- Needs to be dynamically rendered depending on whether or not they're logged in --}}
+            {{!-- <p>The Tech Blog ©</p> --}}
             <button>New Post +</button>
         </section>
     </main>
