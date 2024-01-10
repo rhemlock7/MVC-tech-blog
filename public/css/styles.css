@@ -1,0 +1,59 @@
+/* Color Variables */
+:root {
+    --main: rgb(213, 197, 163);
+    --primary: rgb(43, 31, 6);
+    --accent: #2c542e;
+}
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: var(--main);
+}
+
+/* Primary Elements */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    color: white;
+    padding: 25px 50px;
+}
+
+main {
+    padding: 25px 50px;
+}
+
+button {
+    padding: 15px 35px;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 7px;
+    color: white;
+    font-size: 1.25em;
+}
+
+/* Individual Elements by ID */
+#nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#nav-list li {
+    margin-left: 25px;
+}
+
+#button-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
