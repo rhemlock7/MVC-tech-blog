@@ -65,6 +65,13 @@ a {
     margin-right: 25px;
 }
 
+/* Logout Button */
+#logout {
+    color: white;
+    padding: 0;
+    font-size: 1em;
+}
+
 #page-title {
     margin-top: 25px;
 }
@@ -76,6 +83,8 @@ a {
     justify-content: center;
     align-items: center;
 }
+
+
 
 #article-card {
     border: 3px solid var(--primary);
