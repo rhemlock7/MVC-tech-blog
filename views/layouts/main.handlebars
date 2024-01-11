@@ -32,7 +32,7 @@
         <section id="button-container">
             {{!-- Needs to be dynamically rendered depending on whether or not they're logged in --}}
             {{#if logged_in}}
-            <button>New Post +</button>
+            <a href="/create"><button>New Post +</button></a>
             {{else}}
             <p>The Tech Blog ©</p>
             {{/if}}
