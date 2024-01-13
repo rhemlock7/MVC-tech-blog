@@ -1,3 +1,26 @@
 <section>
-    <h2>Dashboard Page</h2>
+    <div>
+        <h2>Your Blog Posts:</h2>
+    </div>
+    {{#each blogs as |blog|}}
+    {{!-- Card Header --}}
+    <div id="card-header">
+        <a href="/blog/{{id}}">
+            <h2>{{title}}</h2>
+        </a>
+        <p>Posted by {{user_id}} on {{format_date date_created}}</p>
+    </div>
+    {{!-- Card Body --}}
+    <div id="card-body">
+        <p>{{body}}</p>
+    </div>
+    {{!-- Update and Delete buttons rendered only if the blog post is the User's --}}
+    <div>
+        <button id="update-post">Update</button>
+        <button id="delete-post" href="/api/blogs/{{id}}" data-id="{{id}}">Delete</button>
+    </div>
+    {{!-- href="/api/blogs/{{id}}" data-id="{{id}}" --}}
+    {{/each}}
 </section>
+
+<script src="/js/updatePosts.js"></script>
