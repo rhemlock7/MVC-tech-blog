@@ -38,7 +38,7 @@ router.put('/:id', withAuth, async (req, res) => {
 });
 
 // DELETE a blog post
-router.delete('/:id', withAuth, async (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         const blogData = await Blog.destroy({
             where: {

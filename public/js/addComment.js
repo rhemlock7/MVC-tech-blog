@@ -3,14 +3,13 @@ const createPostFormHandler = async (event) => {
     event.preventDefault();
 
     // Collect values from the login form
-    const title = document.querySelector('#blog-title').value.trim();
-    const body = document.querySelector('#blog-body').value.trim();
+    const comment = document.querySelector('#comment-body').value.trim();
 
-    if (title && body) {
+    if (comment) {
         // Send a POST request to the API endpoint
-        const response = await fetch('/api/blogs', {
+        const response = await fetch('/api/comments', {
             method: 'POST',
-            body: JSON.stringify({ title, body }),
+            body: JSON.stringify({ comment }),
             headers: { 'Content-Type': 'application/json' },
         });
 
@@ -22,8 +21,6 @@ const createPostFormHandler = async (event) => {
         }
     }
 };
-
-
 
 document
     .querySelector('.create-form')
