@@ -100,6 +100,32 @@ router.get('/create', async (req, res) => {
     }
 });
 
+// Update a Blog Post
+router.put('/create/"id', async (req, res) => {
+    try {
+        // Get all blogs and JOIN with user data
+        const blogData = await Blog.findByPk({
+            include: [
+                {
+                    model: User,
+                    attributes: ['name'],
+                },
+            ],
+        });
+
+        // Serialize data so the template can read it
+        const blogs = blogData.map((project) => project.get({ plain: true }));
+
+        // Pass serialized data and session flag into template
+        res.render('createPost', {
+            blogs,
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 // Add Comment page
 router.get('/create', async (req, res) => {
     try {
